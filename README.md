@@ -36,8 +36,8 @@ catkin_make
 ## Launching the navigation package:
 To launch the packages you have to launch lidar_gmapping_navigation.launch run the following code.
 ```
-sudo chmod a+rw /dev/ttyACM0
 roscore
+sudo chmod a+rw /dev/ttyACM0
 roslaunch lidar_gmapping_navigation.launch
 ```
 
@@ -45,11 +45,16 @@ To save the map use:
 ```
 rosrun map_server map_saver [-f mapname]
 ```
-After saving you could copy the map data to /catkin_ws/src/lidar_navigation/maps .
+After saving you could copy the map data to /catkin_ws/src/lidar_navigation/maps and go to /catkin_ws/src/lidar_navigation/launch. Then you open the lidar_amcl_navigation.launch file and follow the next steps:
+```
+<arg name="map_file" default= "$(find lidar_navigation)/maps/hallway.yaml"/>
+change hallaw to choosen filename while saving so:
+<arg name="map_file" default= "$(find lidar_navigation)/maps/[map name].yaml"/>
+```
 Now you could use the map in the amcl package.
 
 ```
-sudo chmod a+rw /dev/ttyACM0
 roscore
+sudo chmod a+rw /dev/ttyACM0
 roslaunch lidar_amcl_navigation.launch
 ```
