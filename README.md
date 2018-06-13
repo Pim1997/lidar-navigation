@@ -29,7 +29,7 @@ The urg_node is a driver for Hokuyo lidar systems which makes it possible to use
 The next steps explain how to install the packages and the next part is how to launch the navigation package. First go to the source of the catkin_ws and clone this repository.
 ```
 cd catkin_ws/src
-git clone https://github.com/...........
+git clone https://github.com/Pim1997/lidar-navigation.git
 cd ..
 catkin_make
 ```
