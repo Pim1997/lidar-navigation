@@ -1,10 +1,10 @@
 # Lidar-navigation
 
-# Description:
-This folder contains multiple packages which enables you to navigate through a environment with a hokuyo lidar and a turtlebot 2.
+## Description:
+This github contains multiple packages which enable to navigate through a mapped environment with a Hokuyo UBG-04LX-F01 lidar. This lidar is placed in the middle of a Turtlebot 2. While launching the package it is possible to send 2D nav goals to the Turtlebot. The turtlebot will drive to the given goal using the lidar and the encoders of the turtlebot to know its movement.
 
-# Prerequisites:
+## Prerequisites:
 - Ros Kinetic on Ubuntu 16.04 or higher
+- Hokuyo ubg-04lx-f01
 
-# Tested with:
-- hokuyo ubg-04lx-f01
+## Installation:
