@@ -1,0 +1,17 @@
+<launch>    
+	<include file="$(find turtlebot_lidar_bringup)/launch/lidar_minimal.launch">
+   	</include>
+
+        <include file="$(find urg_node)/launch/urg_lidar.launch">
+   	</include>    
+
+  	<include file="$(find turtlebot_lidar_navigation)/launch/lidar_amcl.launch"> 
+   	<arg name="map_file" default= "$(find lidar_navigation)/maps/hallway.yaml"/>
+  	</include>   
+
+ 	<include file="$(find turtlebot_lidar_rviz_launchers)/launch/view_lidar_navigation.launch">
+   	</include>
+
+    	<node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0.1 0 0.20 0 0 0 /base_link /laser 30"/>
+
+</launch>
