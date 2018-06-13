@@ -48,7 +48,9 @@ rosrun map_server map_saver [-f mapname]
 In order to easily retreive the saved map, it is highly recommended to save the map in the maps directory, which can be found in the lidar_navigation package --> /catkin_ws/src/lidar_navigation/maps. Next go to /catkin_ws/src/lidar_navigation/launch, open the lidar_amcl_navigation.launch file and follow the next step.
 ```
 <arg name="map_file" default= "$(find lidar_navigation)/maps/hallway.yaml"/>
-change hallway.yaml to [file name].yaml in order to retreive the map
+```
+Change hallway.yaml to [file name].yaml in order to retreive the map
+```
 <arg name="map_file" default= "$(find lidar_navigation)/maps/[file name].yaml"/>
 ```
 ## Launching amcl:
