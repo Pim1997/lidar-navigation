@@ -47,8 +47,11 @@ catkin_make
 In order to launch gmapping the following lines should be executed in the terminal:
 ```
 roscore
+```
+Open a new terminal
+```
 sudo chmod a+rw /dev/ttyACM0
-roslaunch lidar_gmapping_navigation.launch
+roslaunch lidar_navigation lidar_gmapping_navigation.launch
 ```
 
 To save the map use:
@@ -68,6 +71,9 @@ Now you should be able to launch amcl with the following command lines:
 
 ```
 roscore
+```
+open a new terminal
+```
 sudo chmod a+rw /dev/ttyACM0
-roslaunch lidar_amcl_navigation.launch
+roslaunch lidar_navigation lidar_amcl_navigation.launch
 ```
