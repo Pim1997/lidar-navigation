@@ -36,7 +36,7 @@ git clone https://github.com/Pim1997/lidar-navigation.git
 Then execute this command:
 
 ```
-chmod +x lidar_navigation/urg_node/cfg/URG.cfg
+chmod +x lidar-navigation/urg_node/cfg/URG.cfg
 ```
 Finally build the packages.
 ```
