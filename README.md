@@ -26,10 +26,20 @@ This urg_c is a libary for the urg_node.
 The urg_node is a driver for Hokuyo lidar systems which makes it possible to use a Hokuyo sensor in ROS. In this driver the settings of the hokuyo lidar are defined. These can be configured in the "cfg" directory. 
 
 ## Installation:
-The first step explains how to install the packages located in this repository and the next part shows how to launch the gmapping and amcl launch files. First go to the source of the catkin_ws and git clone this repository.
+The first step explains how to install the packages located in this repository and the next part shows how to launch the gmapping and amcl launch files. 
+
+First go to the source of the catkin_ws and git clone this repository.
 ```
 cd catkin_ws/src
 git clone https://github.com/Pim1997/lidar-navigation.git
+```
+Then execute this command:
+
+```
+chmod +x lidar_navigation/urg_node/cfg/URG.cfg
+```
+Finally build the packages.
+```
 cd ..
 catkin_make
 ```
