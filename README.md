@@ -30,7 +30,7 @@ The first step explains how to install the packages located in this repository a
 
 First go to the source of the catkin_ws and git clone this repository.
 ```
-cd catkin_ws/src
+cd ~/catkin_ws/src
 git clone https://github.com/Pim1997/lidar-navigation.git
 ```
 Then execute this command:
