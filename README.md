@@ -39,7 +39,6 @@ Then execute this command:
 
 ```
 chmod +x lidar-navigation/urg_node/cfg/URG.cfg
-
 ```
 In order to use the teb_local_planner fill in the following command line:
 ```
