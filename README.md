@@ -24,6 +24,8 @@ This package is used for opening RVIZ on your screen.
 This urg_c is a libary for the urg_node.
 #### Urg_node:
 The urg_node is a driver for Hokuyo lidar systems which makes it possible to use a Hokuyo sensor in ROS. In this driver the settings of the hokuyo lidar are defined. These can be configured in the "cfg" directory. 
+#### Teb_local_planner:
+This local planner will replace the DWA_local_planner in order to improve the behavior of navigation while facing dynamic obstacles.
 
 ## Installation:
 The first step explains how to install the packages located in this repository and the next part shows how to launch the gmapping and amcl launch files. 
@@ -37,6 +39,11 @@ Then execute this command:
 
 ```
 chmod +x lidar-navigation/urg_node/cfg/URG.cfg
+
+```
+In order to use the teb_local_planner fill in the following command line:
+```
+rosdep install teb_local_planner
 ```
 Finally build the packages.
 ```
