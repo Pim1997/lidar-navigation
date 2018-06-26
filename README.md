@@ -9,7 +9,7 @@ This github contains multiple packages which enables a robot to navigate through
 
 ## The packages:
 #### Laser_proc:
-The laser_proc package is used to convert the representations of sensor_msgs/LaserScan and sensor_msgs/MultiEchoLaserScan.
+The laser_proc package is used to convert the representations of sensor_msgs/LaserScan and sensor_msgs/MultiEchoLaserScan. For more information about this package, go to the developers repository: https://github.com/ros-perception/laser_proc
 #### Lidar_navigation:
 The lidar_navigation package is made for building a map and opening a created map. The created maps can be placed in the directory "/maps". There is a launch directory where the launchfiles for mapping and for driving through the mapped map are placed. The "lidar_gmapping_navigation.launch" in the launch directory is made for mapping. The "lidar_amcl_navigation.launch" is created to open the mapped map and open the other packages that are used for navigating through the map.
 #### Turtlebot_lidar_bringup:
@@ -21,11 +21,11 @@ In this package all navigation parameters are defined. Like all costmap paramete
 #### Turtlebot_lidar_rviz_launchers:
 This package is used for opening RVIZ on your screen.
 #### Urg_c:
-This urg_c is a libary for the urg_node.
+This urg_c is a libary for the urg_node, more information can be found on this github repository: https://github.com/ros-drivers/urg_c
 #### Urg_node:
-The urg_node is a driver for Hokuyo lidar systems which makes it possible to use a Hokuyo sensor in ROS and in this driver the settings of the hokuyo lidar are defined. These can be configured in the "/cfg" directory. 
+The urg_node is a driver for Hokuyo lidar systems which makes it possible to use a Hokuyo sensor in ROS and in this driver the settings of the hokuyo lidar are defined. These can be configured in the "/cfg" directory. More information could be found on this github repository:https://github.com/ros-drivers/urg_node
 #### Teb_local_planner:
-This local planner will replace the DWA_local_planner in order to improve the behavior of navigation while facing dynamic obstacles.
+This local planner will replace the DWA_local_planner in order to improve the behavior of navigation while facing dynamic obstacles, more information could be found on this repository: https://github.com/rst-tu-dortmund/teb_local_planner
 
 ## Installation:
 The first step explains how to install the packages located in this repository and the next part shows how to launch the gmapping and amcl launch files. 
@@ -53,6 +53,11 @@ catkin_make
 In order to launch gmapping the following lines should be executed in the terminal:
 ```
 sudo chmod a+rw /dev/ttyACM0
+```
+This command is necessary to prevent this error: Could not open serial Hokuyo: /dev/ttyACM0 @ 115200 could not open serial device.
+
+Next type in the following command:
+```
 roslaunch lidar_navigation lidar_gmapping_navigation.launch
 ```
 
